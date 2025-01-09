@@ -1,0 +1,1489 @@
+{
+  "contractName": "ERPData",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "dataEntries",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "id",
+          "type": "uint256"
+        },
+        {
+          "internalType": "string",
+          "name": "dataHash",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function",
+      "constant": true
+    },
+    {
+      "inputs": [],
+      "name": "entryCount",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function",
+      "constant": true
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "_dataHash",
+          "type": "string"
+        }
+      ],
+      "name": "addDataEntry",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_id",
+          "type": "uint256"
+        }
+      ],
+      "name": "getDataEntry",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        },
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function",
+      "constant": true
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.7.3+commit.9bfce1f6\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"string\",\"name\":\"_dataHash\",\"type\":\"string\"}],\"name\":\"addDataEntry\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"dataEntries\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"id\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"dataHash\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"entryCount\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_id\",\"type\":\"uint256\"}],\"name\":\"getDataEntry\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/ERPData.sol\":\"ERPData\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/ERPData.sol\":{\"keccak256\":\"0x9fabdccf9d4c86a0f62fda41e1f6ef1606998bb0ec2f13049a644b6fc5f15170\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://27439e80256f980f120e4def5a80d356ca59bb069966d0add70dcde671d1325c\",\"dweb:/ipfs/QmZsYtM8UXt1V2sdmastkRNhN2o2PDG9MMj2HRzUWtGmVW\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b5061058a806100206000396000f3fe608060405234801561001057600080fd5b506004361061004c5760003560e01c80630cbb0f8314610051578063325f46581461006f57806360c4ed531461011d578063f75d8ada146101d8575b600080fd5b610059610286565b6040518082815260200191505060405180910390f35b61009b6004803603602081101561008557600080fd5b810190808035906020019092919050505061028c565b6040518083815260200180602001828103825283818151815260200191508051906020019080838360005b838110156100e15780820151818401526020810190506100c6565b50505050905090810190601f16801561010e5780820380516001836020036101000a031916815260200191505b50935050505060405180910390f35b6101d66004803603602081101561013357600080fd5b810190808035906020019064010000000081111561015057600080fd5b82018360208201111561016257600080fd5b8035906020019184600183028401116401000000008311171561018457600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f820116905080830192505050505050509192919290505050610348565b005b610204600480360360208110156101ee57600080fd5b81019080803590602001909291905050506103b2565b6040518083815260200180602001828103825283818151815260200191508051906020019080838360005b8381101561024a57808201518184015260208101905061022f565b50505050905090810190601f1680156102775780820380516001836020036101000a031916815260200191505b50935050505060405180910390f35b60015481565b6000602052806000526040600020600091509050806000015490806001018054600181600116156101000203166002900480601f01602080910402602001604051908101604052809291908181526020018280546001816001161561010002031660029004801561033e5780601f106103135761010080835404028352916020019161033e565b820191906000526020600020905b81548152906001019060200180831161032157829003601f168201915b5050505050905082565b600160008154809291906001019190505550604051806040016040528060015481526020018281525060008060015481526020019081526020016000206000820151816000015560208201518160010190805190602001906103ab92919061049d565b5090505050565b600060606103be61051d565b60008085815260200190815260200160002060405180604001604052908160008201548152602001600182018054600181600116156101000203166002900480601f01602080910402602001604051908101604052809291908181526020018280546001816001161561010002031660029004801561047e5780601f106104535761010080835404028352916020019161047e565b820191906000526020600020905b81548152906001019060200180831161046157829003601f168201915b5050505050815250509050806000015181602001519250925050915091565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106104de57805160ff191683800117855561050c565b8280016001018555821561050c579182015b8281111561050b5782518255916020019190600101906104f0565b5b5090506105199190610537565b5090565b604051806040016040528060008152602001606081525090565b5b80821115610550576000816000905550600101610538565b509056fea264697066735822122078892485b4d26e95ead2df185f73c78b110c056a14989e987df4decfb48df87c64736f6c63430007030033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b506004361061004c5760003560e01c80630cbb0f8314610051578063325f46581461006f57806360c4ed531461011d578063f75d8ada146101d8575b600080fd5b610059610286565b6040518082815260200191505060405180910390f35b61009b6004803603602081101561008557600080fd5b810190808035906020019092919050505061028c565b6040518083815260200180602001828103825283818151815260200191508051906020019080838360005b838110156100e15780820151818401526020810190506100c6565b50505050905090810190601f16801561010e5780820380516001836020036101000a031916815260200191505b50935050505060405180910390f35b6101d66004803603602081101561013357600080fd5b810190808035906020019064010000000081111561015057600080fd5b82018360208201111561016257600080fd5b8035906020019184600183028401116401000000008311171561018457600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f820116905080830192505050505050509192919290505050610348565b005b610204600480360360208110156101ee57600080fd5b81019080803590602001909291905050506103b2565b6040518083815260200180602001828103825283818151815260200191508051906020019080838360005b8381101561024a57808201518184015260208101905061022f565b50505050905090810190601f1680156102775780820380516001836020036101000a031916815260200191505b50935050505060405180910390f35b60015481565b6000602052806000526040600020600091509050806000015490806001018054600181600116156101000203166002900480601f01602080910402602001604051908101604052809291908181526020018280546001816001161561010002031660029004801561033e5780601f106103135761010080835404028352916020019161033e565b820191906000526020600020905b81548152906001019060200180831161032157829003601f168201915b5050505050905082565b600160008154809291906001019190505550604051806040016040528060015481526020018281525060008060015481526020019081526020016000206000820151816000015560208201518160010190805190602001906103ab92919061049d565b5090505050565b600060606103be61051d565b60008085815260200190815260200160002060405180604001604052908160008201548152602001600182018054600181600116156101000203166002900480601f01602080910402602001604051908101604052809291908181526020018280546001816001161561010002031660029004801561047e5780601f106104535761010080835404028352916020019161047e565b820191906000526020600020905b81548152906001019060200180831161046157829003601f168201915b5050505050815250509050806000015181602001519250925050915091565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106104de57805160ff191683800117855561050c565b8280016001018555821561050c579182015b8281111561050b5782518255916020019190600101906104f0565b5b5090506105199190610537565b5090565b604051806040016040528060008152602001606081525090565b5b80821115610550576000816000905550600101610538565b509056fea264697066735822122078892485b4d26e95ead2df185f73c78b110c056a14989e987df4decfb48df87c64736f6c63430007030033",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "69:629:0:-:0;;;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "69:629:0:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;226:22;;;:::i;:::-;;;;;;;;;;;;;;;;;;;174:45;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;298:154;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;517:178;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;226:22;;;;:::o;174:45::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;298:154::-;363:10;;:12;;;;;;;;;;;;;412:32;;;;;;;;422:10;;412:32;;;;434:9;412:32;;;386:11;:23;398:10;;386:23;;;;;;;;;;;:58;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;298:154;:::o;517:178::-;570:4;576:13;602:22;;:::i;:::-;627:11;:16;639:3;627:16;;;;;;;;;;;602:41;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;662:5;:8;;;672:5;:14;;;654:33;;;;;517:178;;;:::o;-1:-1:-1:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;:::o",
+  "source": "// SPDX-License-Identifier: MIT\r\npragma solidity >=0.4.22 <0.9.0;\r\n\r\ncontract ERPData {\r\n    struct DataEntry {\r\n        uint id;\r\n        string dataHash;\r\n    }\r\n    \r\n    mapping(uint => DataEntry) public dataEntries;\r\n    uint public entryCount;\r\n\r\n    // Function to add a new data entry\r\n    function addDataEntry(string memory _dataHash) public {\r\n        entryCount++;\r\n        dataEntries[entryCount] = DataEntry(entryCount, _dataHash);\r\n    }\r\n\r\n    // Function to retrieve a specific data entry by id\r\n    function getDataEntry(uint _id) public view returns (uint, string memory) {\r\n        DataEntry memory entry = dataEntries[_id];\r\n        return (entry.id, entry.dataHash);\r\n    }\r\n}\r\n",
+  "sourcePath": "D:\\dev\\Blockchain\\smart_contract\\contracts\\ERPData.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/ERPData.sol",
+    "exportedSymbols": {
+      "ERPData": [
+        53
+      ]
+    },
+    "id": 54,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".22",
+          "<",
+          "0.9",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "33:32:0"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "id": 53,
+        "linearizedBaseContracts": [
+          53
+        ],
+        "name": "ERPData",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "ERPData.DataEntry",
+            "id": 6,
+            "members": [
+              {
+                "constant": false,
+                "id": 3,
+                "mutability": "mutable",
+                "name": "id",
+                "nodeType": "VariableDeclaration",
+                "scope": 6,
+                "src": "121:7:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 2,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "121:4:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 5,
+                "mutability": "mutable",
+                "name": "dataHash",
+                "nodeType": "VariableDeclaration",
+                "scope": 6,
+                "src": "139:15:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 4,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "139:6:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "DataEntry",
+            "nodeType": "StructDefinition",
+            "scope": 53,
+            "src": "93:69:0",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "functionSelector": "325f4658",
+            "id": 10,
+            "mutability": "mutable",
+            "name": "dataEntries",
+            "nodeType": "VariableDeclaration",
+            "scope": 53,
+            "src": "174:45:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_DataEntry_$6_storage_$",
+              "typeString": "mapping(uint256 => struct ERPData.DataEntry)"
+            },
+            "typeName": {
+              "id": 9,
+              "keyType": {
+                "id": 7,
+                "name": "uint",
+                "nodeType": "ElementaryTypeName",
+                "src": "182:4:0",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "174:26:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_DataEntry_$6_storage_$",
+                "typeString": "mapping(uint256 => struct ERPData.DataEntry)"
+              },
+              "valueType": {
+                "id": 8,
+                "name": "DataEntry",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 6,
+                "src": "190:9:0",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_DataEntry_$6_storage_ptr",
+                  "typeString": "struct ERPData.DataEntry"
+                }
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "functionSelector": "0cbb0f83",
+            "id": 12,
+            "mutability": "mutable",
+            "name": "entryCount",
+            "nodeType": "VariableDeclaration",
+            "scope": 53,
+            "src": "226:22:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 11,
+              "name": "uint",
+              "nodeType": "ElementaryTypeName",
+              "src": "226:4:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 29,
+              "nodeType": "Block",
+              "src": "352:100:0",
+              "statements": [
+                {
+                  "expression": {
+                    "id": 18,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "UnaryOperation",
+                    "operator": "++",
+                    "prefix": false,
+                    "src": "363:12:0",
+                    "subExpression": {
+                      "id": 17,
+                      "name": "entryCount",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 12,
+                      "src": "363:10:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 19,
+                  "nodeType": "ExpressionStatement",
+                  "src": "363:12:0"
+                },
+                {
+                  "expression": {
+                    "id": 27,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "baseExpression": {
+                        "id": 20,
+                        "name": "dataEntries",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 10,
+                        "src": "386:11:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_DataEntry_$6_storage_$",
+                          "typeString": "mapping(uint256 => struct ERPData.DataEntry storage ref)"
+                        }
+                      },
+                      "id": 22,
+                      "indexExpression": {
+                        "id": 21,
+                        "name": "entryCount",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 12,
+                        "src": "398:10:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "386:23:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_DataEntry_$6_storage",
+                        "typeString": "struct ERPData.DataEntry storage ref"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "arguments": [
+                        {
+                          "id": 24,
+                          "name": "entryCount",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 12,
+                          "src": "422:10:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        {
+                          "id": 25,
+                          "name": "_dataHash",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 14,
+                          "src": "434:9:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          },
+                          {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          }
+                        ],
+                        "id": 23,
+                        "name": "DataEntry",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 6,
+                        "src": "412:9:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_struct$_DataEntry_$6_storage_ptr_$",
+                          "typeString": "type(struct ERPData.DataEntry storage pointer)"
+                        }
+                      },
+                      "id": 26,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "structConstructorCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "412:32:0",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_DataEntry_$6_memory_ptr",
+                        "typeString": "struct ERPData.DataEntry memory"
+                      }
+                    },
+                    "src": "386:58:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_DataEntry_$6_storage",
+                      "typeString": "struct ERPData.DataEntry storage ref"
+                    }
+                  },
+                  "id": 28,
+                  "nodeType": "ExpressionStatement",
+                  "src": "386:58:0"
+                }
+              ]
+            },
+            "functionSelector": "60c4ed53",
+            "id": 30,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "addDataEntry",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 15,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 14,
+                  "mutability": "mutable",
+                  "name": "_dataHash",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 30,
+                  "src": "320:23:0",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 13,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "320:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "319:25:0"
+            },
+            "returnParameters": {
+              "id": 16,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "352:0:0"
+            },
+            "scope": 53,
+            "src": "298:154:0",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 51,
+              "nodeType": "Block",
+              "src": "591:104:0",
+              "statements": [
+                {
+                  "assignments": [
+                    40
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 40,
+                      "mutability": "mutable",
+                      "name": "entry",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 51,
+                      "src": "602:22:0",
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_DataEntry_$6_memory_ptr",
+                        "typeString": "struct ERPData.DataEntry"
+                      },
+                      "typeName": {
+                        "id": 39,
+                        "name": "DataEntry",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 6,
+                        "src": "602:9:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_DataEntry_$6_storage_ptr",
+                          "typeString": "struct ERPData.DataEntry"
+                        }
+                      },
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 44,
+                  "initialValue": {
+                    "baseExpression": {
+                      "id": 41,
+                      "name": "dataEntries",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 10,
+                      "src": "627:11:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_DataEntry_$6_storage_$",
+                        "typeString": "mapping(uint256 => struct ERPData.DataEntry storage ref)"
+                      }
+                    },
+                    "id": 43,
+                    "indexExpression": {
+                      "id": 42,
+                      "name": "_id",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 32,
+                      "src": "639:3:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "627:16:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_DataEntry_$6_storage",
+                      "typeString": "struct ERPData.DataEntry storage ref"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "602:41:0"
+                },
+                {
+                  "expression": {
+                    "components": [
+                      {
+                        "expression": {
+                          "id": 45,
+                          "name": "entry",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 40,
+                          "src": "662:5:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_DataEntry_$6_memory_ptr",
+                            "typeString": "struct ERPData.DataEntry memory"
+                          }
+                        },
+                        "id": 46,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "id",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 3,
+                        "src": "662:8:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "expression": {
+                          "id": 47,
+                          "name": "entry",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 40,
+                          "src": "672:5:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_DataEntry_$6_memory_ptr",
+                            "typeString": "struct ERPData.DataEntry memory"
+                          }
+                        },
+                        "id": 48,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "dataHash",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 5,
+                        "src": "672:14:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      }
+                    ],
+                    "id": 49,
+                    "isConstant": false,
+                    "isInlineArray": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "TupleExpression",
+                    "src": "661:26:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$_t_uint256_$_t_string_memory_ptr_$",
+                      "typeString": "tuple(uint256,string memory)"
+                    }
+                  },
+                  "functionReturnParameters": 38,
+                  "id": 50,
+                  "nodeType": "Return",
+                  "src": "654:33:0"
+                }
+              ]
+            },
+            "functionSelector": "f75d8ada",
+            "id": 52,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getDataEntry",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 33,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 32,
+                  "mutability": "mutable",
+                  "name": "_id",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 52,
+                  "src": "539:8:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 31,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "539:4:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "538:10:0"
+            },
+            "returnParameters": {
+              "id": 38,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 35,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 52,
+                  "src": "570:4:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 34,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "570:4:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 37,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 52,
+                  "src": "576:13:0",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 36,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "576:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "569:21:0"
+            },
+            "scope": 53,
+            "src": "517:178:0",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "public"
+          }
+        ],
+        "scope": 54,
+        "src": "69:629:0"
+      }
+    ],
+    "src": "33:667:0"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "project:/contracts/ERPData.sol",
+      "exportedSymbols": {
+        "ERPData": [
+          53
+        ]
+      },
+      "license": "MIT"
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            ">=",
+            "0.4",
+            ".22",
+            "<",
+            "0.9",
+            ".0"
+          ]
+        },
+        "id": 1,
+        "name": "PragmaDirective",
+        "src": "33:32:0"
+      },
+      {
+        "attributes": {
+          "abstract": false,
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            53
+          ],
+          "name": "ERPData",
+          "scope": 54
+        },
+        "children": [
+          {
+            "attributes": {
+              "canonicalName": "ERPData.DataEntry",
+              "name": "DataEntry",
+              "scope": 53,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "constant": false,
+                  "mutability": "mutable",
+                  "name": "id",
+                  "scope": 6,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint256",
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint",
+                      "type": "uint256"
+                    },
+                    "id": 2,
+                    "name": "ElementaryTypeName",
+                    "src": "121:4:0"
+                  }
+                ],
+                "id": 3,
+                "name": "VariableDeclaration",
+                "src": "121:7:0"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "mutability": "mutable",
+                  "name": "dataHash",
+                  "scope": 6,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "string",
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "string",
+                      "type": "string"
+                    },
+                    "id": 4,
+                    "name": "ElementaryTypeName",
+                    "src": "139:6:0"
+                  }
+                ],
+                "id": 5,
+                "name": "VariableDeclaration",
+                "src": "139:15:0"
+              }
+            ],
+            "id": 6,
+            "name": "StructDefinition",
+            "src": "93:69:0"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "functionSelector": "325f4658",
+              "mutability": "mutable",
+              "name": "dataEntries",
+              "scope": 53,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "mapping(uint256 => struct ERPData.DataEntry)",
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "type": "mapping(uint256 => struct ERPData.DataEntry)"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint",
+                      "type": "uint256"
+                    },
+                    "id": 7,
+                    "name": "ElementaryTypeName",
+                    "src": "182:4:0"
+                  },
+                  {
+                    "attributes": {
+                      "name": "DataEntry",
+                      "referencedDeclaration": 6,
+                      "type": "struct ERPData.DataEntry"
+                    },
+                    "id": 8,
+                    "name": "UserDefinedTypeName",
+                    "src": "190:9:0"
+                  }
+                ],
+                "id": 9,
+                "name": "Mapping",
+                "src": "174:26:0"
+              }
+            ],
+            "id": 10,
+            "name": "VariableDeclaration",
+            "src": "174:45:0"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "functionSelector": "0cbb0f83",
+              "mutability": "mutable",
+              "name": "entryCount",
+              "scope": 53,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "uint256",
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "uint",
+                  "type": "uint256"
+                },
+                "id": 11,
+                "name": "ElementaryTypeName",
+                "src": "226:4:0"
+              }
+            ],
+            "id": 12,
+            "name": "VariableDeclaration",
+            "src": "226:22:0"
+          },
+          {
+            "attributes": {
+              "functionSelector": "60c4ed53",
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "addDataEntry",
+              "scope": 53,
+              "stateMutability": "nonpayable",
+              "virtual": false,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "_dataHash",
+                      "scope": 30,
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "type": "string",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string"
+                        },
+                        "id": 13,
+                        "name": "ElementaryTypeName",
+                        "src": "320:6:0"
+                      }
+                    ],
+                    "id": 14,
+                    "name": "VariableDeclaration",
+                    "src": "320:23:0"
+                  }
+                ],
+                "id": 15,
+                "name": "ParameterList",
+                "src": "319:25:0"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 16,
+                "name": "ParameterList",
+                "src": "352:0:0"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "++",
+                          "prefix": false,
+                          "type": "uint256"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 12,
+                              "type": "uint256",
+                              "value": "entryCount"
+                            },
+                            "id": 17,
+                            "name": "Identifier",
+                            "src": "363:10:0"
+                          }
+                        ],
+                        "id": 18,
+                        "name": "UnaryOperation",
+                        "src": "363:12:0"
+                      }
+                    ],
+                    "id": 19,
+                    "name": "ExpressionStatement",
+                    "src": "363:12:0"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "struct ERPData.DataEntry storage ref"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": true,
+                              "type": "struct ERPData.DataEntry storage ref"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 10,
+                                  "type": "mapping(uint256 => struct ERPData.DataEntry storage ref)",
+                                  "value": "dataEntries"
+                                },
+                                "id": 20,
+                                "name": "Identifier",
+                                "src": "386:11:0"
+                              },
+                              {
+                                "attributes": {
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 12,
+                                  "type": "uint256",
+                                  "value": "entryCount"
+                                },
+                                "id": 21,
+                                "name": "Identifier",
+                                "src": "398:10:0"
+                              }
+                            ],
+                            "id": 22,
+                            "name": "IndexAccess",
+                            "src": "386:23:0"
+                          },
+                          {
+                            "attributes": {
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "isStructConstructorCall": true,
+                              "lValueRequested": false,
+                              "names": [
+                                null
+                              ],
+                              "tryCall": false,
+                              "type": "struct ERPData.DataEntry memory",
+                              "type_conversion": false
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": [
+                                    {
+                                      "typeIdentifier": "t_uint256",
+                                      "typeString": "uint256"
+                                    },
+                                    {
+                                      "typeIdentifier": "t_string_memory_ptr",
+                                      "typeString": "string memory"
+                                    }
+                                  ],
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 6,
+                                  "type": "type(struct ERPData.DataEntry storage pointer)",
+                                  "value": "DataEntry"
+                                },
+                                "id": 23,
+                                "name": "Identifier",
+                                "src": "412:9:0"
+                              },
+                              {
+                                "attributes": {
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 12,
+                                  "type": "uint256",
+                                  "value": "entryCount"
+                                },
+                                "id": 24,
+                                "name": "Identifier",
+                                "src": "422:10:0"
+                              },
+                              {
+                                "attributes": {
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 14,
+                                  "type": "string memory",
+                                  "value": "_dataHash"
+                                },
+                                "id": 25,
+                                "name": "Identifier",
+                                "src": "434:9:0"
+                              }
+                            ],
+                            "id": 26,
+                            "name": "FunctionCall",
+                            "src": "412:32:0"
+                          }
+                        ],
+                        "id": 27,
+                        "name": "Assignment",
+                        "src": "386:58:0"
+                      }
+                    ],
+                    "id": 28,
+                    "name": "ExpressionStatement",
+                    "src": "386:58:0"
+                  }
+                ],
+                "id": 29,
+                "name": "Block",
+                "src": "352:100:0"
+              }
+            ],
+            "id": 30,
+            "name": "FunctionDefinition",
+            "src": "298:154:0"
+          },
+          {
+            "attributes": {
+              "functionSelector": "f75d8ada",
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "getDataEntry",
+              "scope": 53,
+              "stateMutability": "view",
+              "virtual": false,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "_id",
+                      "scope": 52,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 31,
+                        "name": "ElementaryTypeName",
+                        "src": "539:4:0"
+                      }
+                    ],
+                    "id": 32,
+                    "name": "VariableDeclaration",
+                    "src": "539:8:0"
+                  }
+                ],
+                "id": 33,
+                "name": "ParameterList",
+                "src": "538:10:0"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "",
+                      "scope": 52,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 34,
+                        "name": "ElementaryTypeName",
+                        "src": "570:4:0"
+                      }
+                    ],
+                    "id": 35,
+                    "name": "VariableDeclaration",
+                    "src": "570:4:0"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "",
+                      "scope": 52,
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "type": "string",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string"
+                        },
+                        "id": 36,
+                        "name": "ElementaryTypeName",
+                        "src": "576:6:0"
+                      }
+                    ],
+                    "id": 37,
+                    "name": "VariableDeclaration",
+                    "src": "576:13:0"
+                  }
+                ],
+                "id": 38,
+                "name": "ParameterList",
+                "src": "569:21:0"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "assignments": [
+                        40
+                      ]
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "constant": false,
+                          "mutability": "mutable",
+                          "name": "entry",
+                          "scope": 51,
+                          "stateVariable": false,
+                          "storageLocation": "memory",
+                          "type": "struct ERPData.DataEntry",
+                          "visibility": "internal"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "name": "DataEntry",
+                              "referencedDeclaration": 6,
+                              "type": "struct ERPData.DataEntry"
+                            },
+                            "id": 39,
+                            "name": "UserDefinedTypeName",
+                            "src": "602:9:0"
+                          }
+                        ],
+                        "id": 40,
+                        "name": "VariableDeclaration",
+                        "src": "602:22:0"
+                      },
+                      {
+                        "attributes": {
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "type": "struct ERPData.DataEntry storage ref"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 10,
+                              "type": "mapping(uint256 => struct ERPData.DataEntry storage ref)",
+                              "value": "dataEntries"
+                            },
+                            "id": 41,
+                            "name": "Identifier",
+                            "src": "627:11:0"
+                          },
+                          {
+                            "attributes": {
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 32,
+                              "type": "uint256",
+                              "value": "_id"
+                            },
+                            "id": 42,
+                            "name": "Identifier",
+                            "src": "639:3:0"
+                          }
+                        ],
+                        "id": 43,
+                        "name": "IndexAccess",
+                        "src": "627:16:0"
+                      }
+                    ],
+                    "id": 44,
+                    "name": "VariableDeclarationStatement",
+                    "src": "602:41:0"
+                  },
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 38
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "isConstant": false,
+                          "isInlineArray": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "type": "tuple(uint256,string memory)"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "id",
+                              "referencedDeclaration": 3,
+                              "type": "uint256"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 40,
+                                  "type": "struct ERPData.DataEntry memory",
+                                  "value": "entry"
+                                },
+                                "id": 45,
+                                "name": "Identifier",
+                                "src": "662:5:0"
+                              }
+                            ],
+                            "id": 46,
+                            "name": "MemberAccess",
+                            "src": "662:8:0"
+                          },
+                          {
+                            "attributes": {
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "dataHash",
+                              "referencedDeclaration": 5,
+                              "type": "string memory"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 40,
+                                  "type": "struct ERPData.DataEntry memory",
+                                  "value": "entry"
+                                },
+                                "id": 47,
+                                "name": "Identifier",
+                                "src": "672:5:0"
+                              }
+                            ],
+                            "id": 48,
+                            "name": "MemberAccess",
+                            "src": "672:14:0"
+                          }
+                        ],
+                        "id": 49,
+                        "name": "TupleExpression",
+                        "src": "661:26:0"
+                      }
+                    ],
+                    "id": 50,
+                    "name": "Return",
+                    "src": "654:33:0"
+                  }
+                ],
+                "id": 51,
+                "name": "Block",
+                "src": "591:104:0"
+              }
+            ],
+            "id": 52,
+            "name": "FunctionDefinition",
+            "src": "517:178:0"
+          }
+        ],
+        "id": 53,
+        "name": "ContractDefinition",
+        "src": "69:629:0"
+      }
+    ],
+    "id": 54,
+    "name": "SourceUnit",
+    "src": "33:667:0"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.7.3+commit.9bfce1f6.Emscripten.clang"
+  },
+  "networks": {
+    "5777": {
+      "events": {},
+      "links": {},
+      "address": "0xE6BC2b67E2bCE3bbCc600c4E27D6DD9e6ecfa804",
+      "transactionHash": "0x004145ee975c8290f2e131707cc452241ff00619c1baae580195e06609533638"
+    }
+  },
+  "schemaVersion": "3.4.16",
+  "updatedAt": "2024-10-03T13:57:54.204Z",
+  "networkType": "ethereum",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}
